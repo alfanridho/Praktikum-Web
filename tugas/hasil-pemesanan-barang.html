@@ -4,43 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pemesanan barang</title>
+    <title>Hasil Pemesanan barang</title>
 </head>
 <body>
-    <form action="hasil-pemesanan-barang.html" method="post">
+    <form action="">
     <table>
         <tr>
             <td>
                 <label for="title">Title Here</label>
             </td>
             <td>:
-                <input type="text" name="title" id="title" size="28">
+                Macbook Air
             </td>
         </tr>
         <tr>
             <td>
-                <label for="description">Description</label>
+                Description
             </td>
             <td>:
-               <textarea name="description" id="description" cols="29" rows="5"></textarea>
+                Year : 2009 <br/> Model : <br/> Condition : Mint
             </td>
         </tr>
         <tr>
             <td>
-                <label for="account">Account Number</label>
+                Total Amount
             </td>
             <td>:
-                <input type="number" name="account" id="account">
+                $800
             </td>
         </tr>
         <tr>
             <td>
-                <label for="bank">Bank</label>
+                Pay to
             </td>
             <td>:
-                <select name="bank" id="bank">
-                    <option value="msbg">MSBG</option>
-                    <option value="msbi">MSBI</option>
+                123-456-789-0
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="payment">Payment Type</label>
+            </td>
+            <td>:
+                <select name="payment" id="payment">
+                    <option value="Visa Debit">Visa Debit</option>
                 </select>
             </td>
         </tr>
@@ -54,11 +61,10 @@
         </tr>
         <tr>
             <td>
-                <label for="transaction">Transaction</label>
+                <label for="account">Account No</label>
             </td>
             <td>:
-                <input type="number" id="transaction" name="transaction" min="1" max="3">
-                <br/> *if the transaction is for 3 person, choose 3 from the drop-down list
+                <input type="number" id="account" name="account">
             </td>
         </tr>
         <tr>
@@ -98,13 +104,12 @@
                 <label for="picture">Upload  Picture</label>
             </td>
             <td>:
-                <input type="file" id="picture" name="picture">
+                <img src="macbook air.jpg" alt="macbook air">
             </td>
         </tr>
     </table>
-    <input type="submit" value="Generate Nobr Link">
     </form>
     <br/>
-    
+    <input type="submit" value="pay using QuidLink">
 </body>
 </html>
