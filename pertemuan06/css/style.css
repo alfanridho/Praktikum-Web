@@ -1,0 +1,43 @@
+*, html {
+    margin-left: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color:antiquewhite;
+}
+
+#header {
+    background-color:rgb(222, 186, 139);
+    text-align: center;
+    padding: 10px;
+    color: blue;
+}
+
+#header blockquote {
+    background-color: #ff0;
+    padding: 10px;
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    font-weight: bold;
+}
+
+.profil {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.gambar {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+.burung {
+    color: #00f;
+    font-size: 50px;
+}
