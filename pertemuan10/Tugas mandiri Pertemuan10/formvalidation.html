@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <form>
+        <table>
+        <tr>
+            <td>
+                <label for="username">Nama pelanggan</label>
+            </td>
+            <td>:
+                <input type="text" name="valid" id="username" maxlength="10">
+            </td>
+            <td>
+                <span id="usernameError">  </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email</label>
+            </td>
+            <td>:
+                <input type="email" name="valid" id="email">
+            </td>
+            <td>
+                <span id="emailError">  </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="jam">Jam keberangkatan</label>
+            </td>
+            <td>:
+                <input type="time" name="valid" id="jam">
+            </td>
+            <td>
+                <span id="timeError">  </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tujuan">Tujuan keberangkatan</label>
+            </td>
+            <td>:
+                <input type="text" name="valid" id="tujuan">
+            </td>
+            <td>
+                <span id="tujuanError">  </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tiket">Jumlah tiket</label>
+            </td>
+            <td>:
+               <input type="number" name="valid" max="10" id="tiket">
+            </td>
+            <td>
+                <span id="tiketError">  </span>
+            </td>
+        </tr>
+    
+    </table>
+</form>
+        <input type="submit" onclick="validateForm()">
+        <br>
+        <p><span id="displayUsername"></span></p>
+        <p><span id="displayEmail"></span></p>
+        <p><span id="displayTime"></span></p>
+        <p><span id="displayTujuan"></span></p>
+        <p><span id="displayTiket"></span></p>
+   
+    
+    <script>
+        function validateForm() {
+            let username = document.getElementById('username').value;
+            let email = document.getElementById('email').value
+            let jam = document.getElementById('jam').value
+            let tujuan = document.getElementById('tujuan').value
+            let tiket = document.getElementById('tiket').value;
+            let all = document.getElementsByClassName("tes");
+            
+            if (username == "") {
+                document.getElementById('usernameError').innerHTML = "Data tidak valid"
+                document.getElementById('usernameError').style = "color: red;"
+            } 
+
+            else if (email == "") {
+                document.getElementById('emailError').innerHTML = "Data tidak valid"
+                document.getElementById('emailError').style = "color: red;"
+            }
+
+            else if (jam == "") {
+                document.getElementById('timeError').innerHTML = "Data tidak valid"
+                document.getElementById('timeError').style = "color: red;"
+            }
+
+            else if (tujuan == "") {
+                document.getElementById('tujuanError').innerHTML = "Data tidak valid"
+                document.getElementById('tujuanError').style = "color: red;"
+            }
+           
+            else if ( tiket < 1 ||tiket > 10 ) {
+                document.getElementById('tiketError').innerHTML = "Data tidak valid, isi dengan bilangan bulat antara 1 - 10"
+                document.getElementById('tiketError').style = "color: red;"
+            }
+            
+             else {
+                document.getElementById('displayUsername').innerHTML =  "Nama Pelanggan : " +username
+                document.getElementById('displayEmail').innerHTML =  "Email : " +email
+                document.getElementById('displayTime').innerHTML =  "Jam keberangkatan : " +jam
+                document.getElementById('displayTujuan').innerHTML =  "Tujuan keberangkatan : " +tujuan
+                document.getElementById('displayTiket').innerHTML =  "Jumlah tiket : " +tiket
+            }
+           }
+    </script>
+
+</body>
+</html>
