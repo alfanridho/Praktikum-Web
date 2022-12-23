@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbox</title>
-  <style>
-    #chatbox {
-      width: 100%;
-      height: 300px;
-      border: 1px solid black;
-    }
-    #input-container {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      border: 1px solid black;
-    }
-    #input-container input {
-      flex: 1;
-      height: 30px;
-      padding: 0 10px;
-    }
-  </style>
-</head>
-<body>
-  <div id="chatbox"></div>
-  <div id="input-container">
-    <input type="text" id="input-message">
-    <button onclick="sendMessage()">Kirim</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbox</title>
+    <style>
+      #chatbox {
+        width: 100%;
+        height: 300px;
+        border: 1px solid black;
+      }
+      #input-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+      }
+      #input-container input {
+        flex: 1;
+        height: 30px;
+        padding: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chatbox"></div>
+    <div id="input-container">
+      <input type="text" id="input-message" />
+      <button onclick="sendMessage()">Kirim</button>
+    </div>
 
-  <script>
-    function sendMessage() {
-      // Ambil nilai dari input
-      let input = document.getElementById('input-message').value;
+    <script>
+      function sendMessage() {
+        // Ambil nilai dari input
+        let input = document.getElementById("input-message").value;
 
-      // Buat element p untuk menampung pesan
-      let p = document.createElement('p');
-      p.innerText = input;
+        // Buat element p untuk menampung pesan
+        let p = document.createElement("p");
+        p.innerText = input;
 
-      // Menambahkan element p ke dalam chatbox
-      let chatbox = document.getElementById('chatbox');
-      chatbox.appendChild(p);
-    }
-  </script>
-</body>
+        // Menambahkan element p ke dalam chatbox
+        let chatbox = document.getElementById("chatbox");
+        chatbox.appendChild(p);
+      }
+    </script>
+  </body>
 </html>
